@@ -17,15 +17,25 @@ function calcularPreco() {
     var valorB_premium = (200 - (imc * 10) + (fatorComorbidade * 20)) * (imc / 10);
 
     // afficher les valeurs du plan
-    var result = document.getElementById('result');
-    result.innerHTML = `<p>Operadora A - Básico: $${valorA_basico.toFixed(2)}</p>
-                        <p>Operadora A - Standard: $${valorA_standard.toFixed(2)}</p>
-                        <p>Operadora A - Premium: $${valorA_premium.toFixed(2)}</p>
+    var result = document.getElementById('resultado');
+    result.innerHTML = `<p>VidaSana Tech - Básico: R$${valorA_basico.toFixed(2)}</p>
+                        <p>VidaSana Tech - Standard: R$${valorA_standard.toFixed(2)}</p>
+                        <p>VidaSana Tech - Premium: R$${valorA_premium.toFixed(2)}</p>
                         <hr>
-                        <p>Operadora B - Básico: $${valorB_basico.toFixed(2)}</p>
-                        <p>Operadora B - Standard: $${valorB_standard.toFixed(2)}</p>
-                        <p>Operadora B - Premium: $${valorB_premium.toFixed(2)}</p>`;
+                        <p>CuraPlus Innovations - Básico: R$${valorB_basico.toFixed(2)}</p>
+                        <p>CuraPlus Innovations - Standard: R$${valorB_standard.toFixed(2)}</p>
+                        <p>CuraPlus Innovations - Premium: R$${valorB_premium.toFixed(2)}</p>`;
+
+    var result = document.getElementById('infor');
+    result.innerHTML = `<p>Esperamos que esteja bem!</p>
+                        <p>Mas se não estiver, temos a solução!<p/>
+                        <p>Seu valor IMC: ${imc.toFixed(2)}.</p>
+                        <p>Seu fator de comorbidade: ${fatorComorbidade}</p>
+                        <hr>
+                        <p>Ao lado temos os valores dos planos das empresas apoiadoras!</p>`;
 }
+
+
 // valeurs du tableau pdf
 function getFatorComorbidade(imc) {
     if (imc < 18.5) {

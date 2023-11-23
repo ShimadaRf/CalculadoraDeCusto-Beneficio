@@ -6,35 +6,45 @@
     <script src="calculadora.js"></script>
     <title>Comparador de Planos de Saúde</title>
     <link rel="stylesheet" href="css\bootstrap.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container-fluid" >
         <div class="row fundoum">
             <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
-                <h1>Comparador de Planos de Saúde</h1>
+                <h1 class="text-center">Comparador de Planos de Saúde</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
-                <form id="healthForm">
-                    <label for="altura">Altura(m):</label>
-                    <input type="number" id="altura" required>
+        <div class="row fundodois">
+            <div class="col-sm-4 col-md-4 col-lg-4 mx-auto">
+                <form id="formulario">
+                    <label class="form-label" for="altura">Altura(m):</label>
+                    <input class="form-control" type="number" id="altura" required>
         
-                    <label for="peso">Peso(kg):</label>
-                    <input type="number" id="peso" required>
+                    <label class="form-label" for="peso">Peso(kg):</label>
+                    <input class="form-control" type="number" id="peso" required>
         
-                    <label for="idade">Idade:</label>
-                    <input type="number" id="idade" required>
-        
-                    <button type="button" onclick="calcularPreco()">Calcular</button>
+                    <label class="form-label" for="idade">Idade:</label>
+                    <input class="form-control" type="number" id="idade" required>
+                    <div class="text-center">
+                    <button class="btn btn-primary mt-2" type="button" onclick="calcularPreco()">Calcular</button>
+                    </div>
                 </form>
             </div>
             
         </div>
-            
-        <div id="result"></div>
+        <div class="row fundoum">
+            <div class="col-sm-4 col-md-4 col-lg-4 mx-auto" id="infor"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 mx-auto" id="resultado"></div>
+        </div>    
     </div>
+    <footer>
+        <div class="row fundodois">
+            <div class="col-sm-4 col-md-4 col-lg-4 mx-auto vertical">
+                <p> 2023 HealthCompany, Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
